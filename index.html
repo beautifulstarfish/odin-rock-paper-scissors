@@ -20,13 +20,22 @@
             }
         }
 
-        console.log(getComputerChoice());
-
         function getHumanChoice() {
-            prompt("Choose one - rock, paper or scissors.");
+            prompt("Choose one: rock, paper, scissors");
         }
 
-        console.log(getHumanChoice());
+        let humanScore = 0;
+        let computerScore = 0;
+
+        function playRound(humanChoice, computerChoice) {
+            return humanChoice.toLowerCase() + " vs " + computerChoice;
+        }
+
+        const humanSelection = getHumanChoice();
+        const computerSelection = getComputerChoice();
+
+        playRound(humanSelection, computerSelection);
+
     </script>
     
 </body>
