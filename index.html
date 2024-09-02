@@ -21,14 +21,47 @@
         }
 
         function getHumanChoice() {
-            prompt("Choose one: rock, paper, scissors");
+            let randomHuman = prompt("Choose one: rock, paper, scissors");
+            if (randomHuman === rock || paper || scissors) {
+                return randomHuman;
+            } else {
+                prompt("Invalid choice. Choose one: rock, paper, scissors")
+            }
         }
 
         let humanScore = 0;
         let computerScore = 0;
 
         function playRound(humanChoice, computerChoice) {
-            return humanChoice.toLowerCase() + " vs " + computerChoice;
+
+
+            switch (humanChoice, computerChoice) {
+                case "rock, rock":
+                case "paper, paper":
+                case "scissors, scissors":
+                    console.log("Tie game! Try again");
+                    break;
+                case "rock, scissors":
+                    console.log("You win! Rock beats scissors");
+                    break;
+                case "paper, rock":
+                    console.log("You win! Paper beats rock");
+                    break;
+                case "scissors, paper":
+                    console.log("You win! Scissors beats paper");
+                    break;
+                case "rock, paper":
+                    console.log("You lose! Paper beats rock");
+                    break;
+                case "paper, scissors":
+                    console.log("You lose! Scissors beats paper");
+                    break;
+                case "scissors, rock":
+                    console.log("You lose! Rock beats scissors");
+                    break;
+                default:
+                    console.log("Sorry, thats not a valid choice. Try again");
+            }
         }
 
         const humanSelection = getHumanChoice();
