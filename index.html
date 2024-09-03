@@ -34,18 +34,26 @@
                 (humanChoice.toLowerCase() === "paper" && computerChoice === "paper") || 
                 (humanChoice.toLowerCase() === "scissors" && computerChoice === "scissors")) {
                     console.log("Tie game! Try again");
+                    humanScore++;
+                    computerScore++;    
             } else if ((humanChoice.toLowerCase() === "rock" && computerChoice === "scissors")) {
                 console.log("You win! Rock beats scissors");
+                humanScore++;
             } else if ((humanChoice.toLowerCase() === "paper" && computerChoice === "rock")) {
                 console.log("You win! Paper beats rock");
+                humanScore++;
             } else if ((humanChoice.toLowerCase() === "scissors" && computerChoice === "paper")) {
                 console.log("You win! Scissors beats paper");
+                humanScore++;
             } else if ((humanChoice.toLowerCase() === "rock" && computerChoice === "paper")) {
                 console.log("You lose! Paper beats rock");
+                computerScore++;
             } else if ((humanChoice.toLowerCase() === "paper" &&  computerChoice === "scissors")) {
                 console.log("You lose! Scissors beats paper");
+                computerScore++;
             } else if ((humanChoice.toLowerCase() === "scissors" && computerChoice === "rock")) {
                 console.log("You lose! Rock beats scissors");
+                computerScore++;
             } else {
                 console.log("Sorry, thats not a valid choice. Try again");
             }
